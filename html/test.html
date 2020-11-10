@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>テストページ</title>
+        <style>
+            #test_id,body p .second{
+                color:rgb(197, 59, 34);
+                font: size 18px;
+                text-align: center;
+                border-bottom:solid 2px black
+            }
+            body{
+                background-color: chartreuse;
+            }
+            .first{
+                border:double 3px yellow;
+            }
+            /*コメントアウト*/
+        </style>
+    </head>
+    <body>
+
+        <h1>これは一番大きい見出し</h1>
+        <h2>これは二番目に大きい見出し</h2>
+        <h3>これは三番目に大きい見出し</h3>
+        <h4>これは四番目に大きい見出し</h4>
+        <h6>これは6番目に大きい見出し</h6>
+
+        <p>test文章です。</p>
+
+        <p>
+            <img sec="test.JPG" alt="test.jpgの読み込み失敗" />
+        </p>
+
+        <p>
+            <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox">
+                これはgmailへのリンクです。
+            </a>
+        </p>
+
+        <ul>
+            <li>これは箇条書きの一つ目</li>
+            <li>これは箇条書きの二つ目</li>
+        </ul>
+
+        <ol>
+            <li>番号付き箇条書き一つ目</li>
+            <li>番号付き箇条書き二つ目</li>
+        </ol>
+
+        <p>
+            今から改行します。<br>
+            改行しました。
+        </p>
+
+        <p class="test_class">クラスは同じページで何度も使えます。</p>
+        <p id="test_id">IDは同じページの中で一度しか使えません</p>
+        
+        <div class="first">
+            <p>
+                <h1>ここはクラス：firstの中です。</h1>
+                <p>これでまとまりを作っています。</p>
+            </p>
+        </div>
+        <div class="second">
+            <p>
+                <h1>ここはクラス：secondの中です。</h1>
+                <p>これでまとまりを作っています。</p>
+            </p>
+        </div>
+
+        <p>ここが<span class="first">スパン:first</span>です。</p>
+        <p>ここが<span class="second">スパン:second</span>です。</p>
+        <p>スパンでは改行がされません。</p>
+        <!--これがコメントアウトです。-->
+    </body>
+
+
+</html>
