@@ -9,7 +9,20 @@
                 text-align: center;
                 border-bottom:solid 2px black
             }
+            body p{
+                color: rgb(250, 250, 250);
+                width: 300px;
+                min-height: 30px;
+                background-color: black;
+                padding: 10px;
+                margin: 8px;
+            }/*同じものを指定すると範囲が狭いものを優先*/
+            img{
+                width: 200px;
+                height: 100px;
+            }
             body{
+                padding-left: 30px;
                 background-color: chartreuse;
             }
             .first{
@@ -28,15 +41,11 @@
 
         <p>test文章です。</p>
 
-        <p>
-            <img sec="test.JPG" alt="test.jpgの読み込み失敗" />
-        </p>
+            <img src="test.JPG" alt="test.jpgの読み込み失敗" />
 
-        <p>
             <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox">
-                これはgmailへのリンクです。
+                <p>これはgmailへのリンクです。</p>
             </a>
-        </p>
 
         <ul>
             <li>これは箇条書きの一つ目</li>
@@ -57,16 +66,12 @@
         <p id="test_id">IDは同じページの中で一度しか使えません</p>
         
         <div class="first">
-            <p>
                 <h1>ここはクラス：firstの中です。</h1>
                 <p>これでまとまりを作っています。</p>
-            </p>
         </div>
         <div class="second">
-            <p>
                 <h1>ここはクラス：secondの中です。</h1>
                 <p>これでまとまりを作っています。</p>
-            </p>
         </div>
 
         <p>ここが<span class="first">スパン:first</span>です。</p>
