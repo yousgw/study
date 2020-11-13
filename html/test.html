@@ -14,7 +14,7 @@
                 width: 300px;
                 min-height: 30px;
                 background-color: black;
-                padding: 10px;
+                padding: 20px;
                 margin: 8px;
             }/*同じものを指定すると範囲が狭いものを優先*/
             img{
@@ -28,6 +28,39 @@
             .first{
                 border:double 3px yellow;
             }
+            .block1{
+                background-color: coral;
+                padding: 10px;
+                margin: 15px;
+                width: 200px;
+                height: 50px;
+                /*中央揃えや寄せはできない*/
+            }
+            .block2{
+                background-color: cornflowerblue;
+                padding: 5px;
+                margin-right: auto;
+                margin-left: auto;
+                /*こうすれば中央揃え*/
+            }
+            .inline a{
+                background-color: darkorange;
+                padding-left: 8px;
+                padding-right: 16px;
+                /*width,heightや上下の余白は設定できない*/
+            }
+            .inline span{
+                background-color: cornflowerblue;
+            }
+            .inline{
+                text-align: center;
+                /*親タグに指定することにより中央揃えなど可能*/
+            }
+            /*
+            a{変更することも可能
+                display: block;
+            }
+            */
             /*コメントアウト*/
         </style>
     </head>
@@ -77,6 +110,11 @@
         <p>ここが<span class="first">スパン:first</span>です。</p>
         <p>ここが<span class="second">スパン:second</span>です。</p>
         <p>スパンでは改行がされません。</p>
+        <p class="block1">これはブロック1です。</p>
+        <p class="block2">これはブロック2です。</p>
+        <div class="inline">
+            <p>これは<a href="file:///C:/Users/you99/Documents/study/html/test.html">aタグ</a>と<span>spanタグ</span>です。</p>
+        </div>
         <!--これがコメントアウトです。-->
     </body>
 
