@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue.jsのテスト</title>
+</head>
+<body>
+    <div id="app">
+        {{ message }}
+        <p v-if="error">error happened</p>
+    </div>
+
+    <div id="app-4">
+        <ol>
+          <li v-for="test in tests">
+            {{ test.text }}
+          </li>
+        </ol>
+    </div>
+
+    <div id="app-5">
+        <p>{{ message }}</p>
+        <button v-on:click="countUp">count up</button>
+    </div>
+
+    <div id="app-6">
+        <p>{{ message }}</p>
+        <input v-model="message">
+    </div>
+
+    <div id="app2">
+        <input v-model="message">
+        <button v-on:click="add">add</button>
+        <ol>
+            <li v-for="todo in todos">
+                {{ todo.text}}
+            </li>
+        </ol>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="test.js"></script>
+</body>
+</html>
