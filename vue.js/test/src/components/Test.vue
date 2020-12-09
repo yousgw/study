@@ -1,26 +1,48 @@
 <template>
-    <div id="app">
-        <input v-model="message">
-        <button v-on:click="add">add</button>
-        <ol>
-            <li v-for="todo in todos">
-                {{ todo.text}}
-            </li>
-        </ol>
+    <div>
+        <v-text-field
+        label="New Task"
+        hide-details="auto"
+        v-model="task"
+        ></v-text-field>
+        <v-btn
+        elevation="2"
+        @click="click"
+        class="ma-3"
+        >Add</v-btn>
+        <v-card
+            class="mx-auto"
+            max-width="300"
+            tile
+        >
+            <v-list dense>
+            <v-subheader>My Tasks</v-subheader>
+            <v-list-item-group
+                color="primary"
+            >
+                <v-list-item
+                v-for="(item, i) in items"
+                :key="i"
+                >
+                    <v-list-item-content>
+                        <v-list-item-title v-text="item.text"></v-list-item-title>
+                    </v-list-item-content>
+                </v-list-item>
+            </v-list-item-group>
+            </v-list>
+        </v-card>
     </div>
 </template>
 
 <script>
     export default {
-        el: '#app',
-        data () {
-            return {
-                todos: []
-            }
-        },
-        methods: {
-            add: function () {
-            this.todos.push({ text: this.message})
+        data: () => ({
+            items: [],
+        }),
+        methods:{
+            click(){
+                this.items.push({"text":this.task});
+                this.task = "";
             }
         }
     }
